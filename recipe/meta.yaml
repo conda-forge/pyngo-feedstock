@@ -1,5 +1,5 @@
 {% set name = "pyngo" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,23 +7,23 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyngo-{{ version }}.tar.gz
-  sha256: 26f0b178ddacfef49c7925d14d1f9f6aedc0113491e5b6865fe90f1f3c0f672f
+  sha256: f890aa22e738bfcfd30746f4044dc8c67740a6883056c7a9df3a74cf66ccd1d7
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - hatchling
     - pip
   run:
-    - python >=3.7
-    - typing-extensions >=3.7.4,<4.5.0
+    - python >=3.8
+    - typing-extensions >=3.7.4,<4.9.0
     - pydantic >=1.8.2,<2.0.0
-    - django >=3.2.0,<4.0.0
+    - django >=3.2.0,<6.0.0
 
 test:
   imports:
