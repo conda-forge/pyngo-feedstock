@@ -1,13 +1,13 @@
 {% set name = "pyngo" %}
-{% set version = "2.2.1" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyngo-{{ version }}.tar.gz
-  sha256: 9e082ac01019c9cc75a5d513cc7588568c5dc94067fff9dd4339b02332de8d77
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyngo-{{ version }}.tar.gz
+  sha256: ff0ebc42a524dc5454763702a1941f977e3169ec7379d1cfff9077c4dafb40b5
 
 build:
   noarch: python
