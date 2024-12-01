@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.8
-    - typing-extensions >=3.7.4,<4.10.0
-    - pydantic >=2.5.3
+    - python >={{ python_min }}
+    - typing_extensions >=3.7.4,<4.13.0
+    - pydantic >=2.8.2,<2.11.0
     - django >=3.2.0,<6.0.0
 
 test:
@@ -31,6 +31,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
