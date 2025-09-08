@@ -1,5 +1,5 @@
 {% set name = "pyngo" %}
-{% set version = "2.4.0" %}
+{% set version = "2.4.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyngo-{{ version }}.tar.gz
-  sha256: 4450405fa0b9c9a4fbf56ba24baa696c23ec75f3d4268f86f1aff58e67273ac4
+  sha256: 7cb71a92eea5fc4d9cff0df20667ad857251e5ae8d52e34f08a0bad748a7ccf9
 
 build:
   noarch: python
